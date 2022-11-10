@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" ></script>
+    <link href="./style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    
+<div class="navbar">
+ 
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+  </div>
+
+    <h1> Motor Cars</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Colour</th>
+                <th>Brand</th>
+                <th>Reg_Number</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody class="vehicles">
+            <!-- Put data from the API in here -->
+            <script class="carsTypesTemplate" type="text/template-x">
+                {{#each cars}}
+                <tr>
+                    <td>{{model}}</td>
+                    <td>{{color}}</td>
+                    <td>{{make}}</td>
+                    <td>{{reg_number}}</td>                
+                    <td>{{price}}</td>
+                </tr>
+                {{/each}}
+            </script>
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+<!-- <div class="all"> -->
+    <!-- <div class="colors&brands" style="margin-left: 20%;"> -->
+    <!-- <h1>Colors</h1> -->
+    <div class="colors">
+        <script class="colorsOfCarsTemplate" type="text/template-x">
+            {{#each AllColor}}
+           <ul> <li> {{this}} <br> </li> </ul> 
+            {{/each}}
+        </script>
+    </div>
+
+    <!-- <h1>All Brands</h1> -->
+        <div class="Carbrands">
+        <script class="carBrandsTemplate" type="text/template-x">
+            {{#each AllBrands}}
+           <ul> <li> {{this}} <br> </li> </ul> 
+            {{/each}}
+        </script>
+    </div>
+</div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
