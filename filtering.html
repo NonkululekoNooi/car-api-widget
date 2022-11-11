@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" ></script>
+    <link href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <label for="language">PLEASE SELECT A BRAND OR COLOR:</label>
+
+<div class="display-cars">
+    <script class="carsText" type="text/template-x">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">Show Cars</th>
+                </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                    <th>Reg Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each cars}}
+                <tr>
+                    <td>{{index}}</td>
+                    <td>{{make}}</td>
+                    <td>{{model}}</td>
+                    <td>{{color}}</td>
+                    <td>{{price}}</td>
+                    <td>{{reg_number}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+</div>
+
+<select name="typeOfColor" class="typeOfColors">
+    <script class="color" type="text/template-x">
+    <option value=""> --Please select a color-- </option>
+    {{#each colour}}
+    <option value="{{this}}">{{this}}</option>
+    {{/each}}
+    </script>
+</select>
+
+</body>
+</html>
